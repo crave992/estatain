@@ -1,0 +1,16 @@
+{
+  "name": "estatain/theme",
+  "description": "Estatain WordPress Theme",
+  "type": "project",
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Estatain\\Inc\\": "inc/"
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=WordPress ."
+  }
+}

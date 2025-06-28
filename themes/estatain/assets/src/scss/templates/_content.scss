@@ -1,0 +1,8 @@
+.content-title {
+    position: relative;
+    &__icon {
+        position: absolute;
+        top: -30px;
+        left: -20px;
+    }
+}

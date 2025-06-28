@@ -1,0 +1,7 @@
+# Ignore compiled assets
+assets/css/
+assets/js/
+
+# Node modules and vendor
+node_modules/
+vendor/ 

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        { "color": "#222", "name": "Primary", "slug": "primary" },
+        { "color": "#f8f9fa", "name": "Background", "slug": "background" },
+        { "color": "#0073aa", "name": "Accent", "slug": "accent" },
+        { "color": "#703BF7", "name": "Purple 1", "slug": "purple-1" },
+        { "color": "#8254F8", "name": "Purple 2", "slug": "purple-2" },
+        { "color": "#946CF9", "name": "Purple 3", "slug": "purple-3" },
+        { "color": "#A685FA", "name": "Purple 4", "slug": "purple-4" },
+        { "color": "#DBCEFD", "name": "Purple 5", "slug": "purple-5" },
+        { "color": "#EDE7FE", "name": "Purple 6", "slug": "purple-6" },
+        { "color": "#F4F0FE", "name": "Purple 7", "slug": "purple-7" },
+        { "color": "#FBFAFF", "name": "Purple 8", "slug": "purple-8" },
+        { "color": "#E4E4E7", "name": "White 1", "slug": "white-1" },
+        { "color": "#F1F1F3", "name": "White 2", "slug": "white-2" },
+        { "color": "#F7F7F8", "name": "White 3", "slug": "white-3" },
+        { "color": "#FCFCFD", "name": "White 4", "slug": "white-4" },
+        { "color": "#141414", "name": "Grey 1", "slug": "grey-1" },
+        { "color": "#1A1A1A", "name": "Grey 2", "slug": "grey-2" },
+        { "color": "#262626", "name": "Grey 3", "slug": "grey-3" },
+        { "color": "#333333", "name": "Grey 4", "slug": "grey-4" },
+        { "color": "#4D4D4D", "name": "Grey 5", "slug": "grey-5" },
+        { "color": "#666666", "name": "Grey 6", "slug": "grey-6" },
+        { "color": "#808080", "name": "Grey 7", "slug": "grey-7" },
+        { "color": "#999999", "name": "Grey 8", "slug": "grey-8" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Arial, Helvetica, sans-serif",
+          "name": "Arial",
+          "slug": "arial"
+        },
+        {
+          "fontFamily": "'Urbanist', Arial, Helvetica, sans-serif",
+          "name": "Urbanist",
+          "slug": "urbanist"
+        }
+      ],
+      "fontSizes": [
+        { "name": "Small", "size": "0.875rem", "slug": "small" },
+        { "name": "Normal", "size": "1rem", "slug": "normal" },
+        { "name": "Large", "size": "1.5rem", "slug": "large" }
+      ]
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1600px"
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--urbanist)"
+    }
+  }
+}

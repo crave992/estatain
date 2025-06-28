@@ -1,0 +1,1 @@
+console.log('Estatain theme JS loaded.'); 

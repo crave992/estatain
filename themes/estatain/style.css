@@ -1,0 +1,261 @@
+/*
+Theme Name: Estatain
+Theme URI: https://example.com/themes/estatain/
+Author: Your Name or Company
+Author URI: https://example.com
+Description: Estatain is a custom WordPress theme designed for real estate and business websites, following modern WordPress theme development best practices.
+Requires at least: 6.7
+Tested up to: 6.8
+Requires PHP: 7.2
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: estatain
+Tags: custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, business
+*/
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+/* Base styles for Estatain theme */
+body {
+  background: #141414;
+  color: #222;
+  font-family: "Urbanist", Arial, Helvetica, sans-serif;
+}
+
+.wrapper-container {
+  max-width: 1596px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.purple-button .wp-block-button__link:hover {
+  background-color: #A685FA !important;
+  -webkit-box-shadow: 0 2px 4px #703BF7;
+          box-shadow: 0 2px 4px #703BF7;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.purple-button-outline .wp-block-button__link:hover {
+  color: #141414 !important;
+  background-color: #999999 !important;
+  -webkit-box-shadow: 0 2px 4px #333333;
+          box-shadow: 0 2px 4px #333333;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.header-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  background: #1A1A1A;
+  padding: 0.5rem 2rem;
+  min-height: 56px;
+}
+
+.site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.site-branding img, .site-branding svg {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.main-navigation .primary-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-navigation .primary-menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-navigation .primary-menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  -webkit-transition: background 0.2s, border 0.2s;
+  transition: background 0.2s, border 0.2s;
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.main-navigation .primary-menu .current-menu-item > a,
+.main-navigation .primary-menu a:hover,
+.main-navigation .primary-menu a:focus {
+  border: 1px solid #E4E4E7;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-navigation .secondary-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-navigation .secondary-menu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact-navigation .secondary-menu a {
+  color: #FFFFFF;
+  border: 1px solid #E4E4E7;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: background 0.2s, color 0.2s, border 0.2s;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.contact-navigation .secondary-menu a:hover,
+.contact-navigation .secondary-menu a:focus {
+  background: #E4E4E7;
+  color: #141414;
+  border-color: #F1F1F3;
+}
+
+.site-headline-bar {
+  width: 100%;
+  background: #1A1A1A;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  z-index: 10;
+}
+
+.site-headline-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  font-family: inherit;
+}
+
+.headline-icon {
+  font-size: 1.2em;
+  margin-right: 0.25em;
+}
+
+.headline-text {
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.headline-link {
+  color: #FFFFFF;
+  font-weight: 500;
+  margin-left: 0.5em;
+  text-decoration: underline;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.headline-link:hover, .headline-link:focus {
+  color: #703BF7;
+}
+
+.headline-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #E4E4E7;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border-radius: 50%;
+  -webkit-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+.headline-close:hover, .headline-close:focus {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.hero-bottom {
+  margin: 10px 0;
+}
+
+.hero-column {
+  position: relative;
+}
+.hero-column__arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.content-title {
+  position: relative;
+}
+.content-title__icon {
+  position: absolute;
+  top: -30px;
+  left: -20px;
+}
+
+@media (min-width: 600px) and (max-width: 1440px) {
+  .font-60 {
+    font-size: 2.875rem !important;
+  }
+  .font-40 {
+    font-size: 2.5rem !important;
+  }
+  .font-18 {
+    font-size: 0.9rem !important;
+  }
+  .button-18 .wp-block-button__link {
+    font-size: 1rem !important;
+  }
+}

@@ -1,0 +1,11 @@
+.hero-bottom {
+    margin: 10px 0;
+}
+.hero-column {
+    position: relative;
+    &__arrow {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}

@@ -1,0 +1,150 @@
+.header-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: $grey-2;
+  padding: 0.5rem 2rem;
+  min-height: 56px;
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+
+  img, svg {
+    height: 32px;
+    width: auto;
+    margin-right: 0.5rem;
+  }
+}
+
+.main-navigation .primary-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s, border 0.2s;
+    border: 1px solid transparent;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .current-menu-item > a,
+  a:hover,
+  a:focus {
+    border: 1px solid $white-1;
+    background: rgba($white, 0.04);
+  }
+}
+
+.contact-navigation .secondary-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: $white;
+    border: 1px solid $white-1;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    background: transparent;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+  }
+
+  a:hover,
+  a:focus {
+    background: $white-1;
+    color: $grey-1;
+    border-color: $white-2;
+  }
+}
+
+.site-headline-bar {
+  width: 100%;
+  background: $grey-2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  border-bottom: 1px solid rgba($white, 0.04);
+  z-index: 10;
+}
+
+.site-headline-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: $white;
+  font-family: inherit;
+}
+
+.headline-icon {
+  font-size: 1.2em;
+  margin-right: 0.25em;
+}
+
+.headline-text {
+  color: $white;
+  font-weight: 400;
+}
+
+.headline-link {
+  color: $white;
+  font-weight: 500;
+  margin-left: 0.5em;
+  text-decoration: underline;
+  transition: color 0.2s;
+  &:hover,
+  &:focus {
+    color: $purple-1;
+  }
+}
+
+.headline-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: $white-1;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+  &:hover,
+  &:focus {
+    background: rgba($white, 0.08);
+    color: $white;
+  }
+}
