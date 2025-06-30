@@ -90,5 +90,80 @@ class Setup {
             'type'        => 'text',
             'priority'    => 0,
         ]);
+        
+        // Add Footer section
+        $wp_customize->add_section('estatain_footer_section', [
+            'title'    => __('Footer', 'estatain'),
+            'priority' => 40,
+        ]);
+        // Add Footer text field
+        $wp_customize->add_setting('estatain_footer_text', [
+            'default'           => '',
+            'sanitize_callback' => 'wp_kses_post',
+            'transport'         => 'refresh',
+        ]);
+        $wp_customize->add_control('estatain_footer_text', [
+            'label'       => __('Footer text', 'estatain'),
+            'section'     => 'estatain_footer_section',
+            'type'        => 'textarea',
+            'priority'    => 1,
+        ]);
+        // Add Footer year field
+        $wp_customize->add_setting('estatain_footer_year', [
+            'default'           => date('Y'),
+            'sanitize_callback' => 'sanitize_text_field',
+            'transport'         => 'refresh',
+        ]);
+        $wp_customize->add_control('estatain_footer_year', [
+            'label'       => __('Footer year', 'estatain'),
+            'section'     => 'estatain_footer_section',
+            'type'        => 'text',
+            'priority'    => 2,
+        ]);
+        // Add Footer social links
+        $wp_customize->add_setting('estatain_footer_facebook', [
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+            'transport'         => 'refresh',
+        ]);
+        $wp_customize->add_control('estatain_footer_facebook', [
+            'label'       => __('Facebook URL', 'estatain'),
+            'section'     => 'estatain_footer_section',
+            'type'        => 'url',
+            'priority'    => 10,
+        ]);
+        $wp_customize->add_setting('estatain_footer_linkedin', [
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+            'transport'         => 'refresh',
+        ]);
+        $wp_customize->add_control('estatain_footer_linkedin', [
+            'label'       => __('LinkedIn URL', 'estatain'),
+            'section'     => 'estatain_footer_section',
+            'type'        => 'url',
+            'priority'    => 11,
+        ]);
+        $wp_customize->add_setting('estatain_footer_twitter', [
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+            'transport'         => 'refresh',
+        ]);
+        $wp_customize->add_control('estatain_footer_twitter', [
+            'label'       => __('Twitter URL', 'estatain'),
+            'section'     => 'estatain_footer_section',
+            'type'        => 'url',
+            'priority'    => 12,
+        ]);
+        $wp_customize->add_setting('estatain_footer_youtube', [
+            'default'           => '',
+            'sanitize_callback' => 'esc_url_raw',
+            'transport'         => 'refresh',
+        ]);
+        $wp_customize->add_control('estatain_footer_youtube', [
+            'label'       => __('YouTube URL', 'estatain'),
+            'section'     => 'estatain_footer_section',
+            'type'        => 'url',
+            'priority'    => 13,
+        ]);
     }
 } 

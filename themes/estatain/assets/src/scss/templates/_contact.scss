@@ -1,0 +1,36 @@
+.wpcf7-form {
+    p {
+        label{
+            font-family: 'Urbanist';
+            font-size: 1.25rem;
+            color: $white;
+        }
+    }
+    input[type=text], input[type=email] {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        margin: 0 0 1rem;
+        border: 1px $grey-3 solid;
+        border-radius: 10px;
+        color: $white;
+        background-color: $grey-1;
+    }
+    textarea {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        border: 1px $grey-3 solid;
+        border-radius: 10px;
+        margin: 0 0 1rem;
+        color: $white;
+        background-color: $grey-1;
+    }
+}
+
+.wpcf7-submit {
+    border: 1px $grey-3 solid;
+    border-radius: 12px;
+    background-color: $grey-1;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    color: $white;
+}

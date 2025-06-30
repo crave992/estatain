@@ -6,3 +6,17 @@
         left: -20px;
     }
 }
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    background: $grey-2;
+}
+
+.page-title {
+    color: $white;
+    padding: 1rem 2rem;
+}

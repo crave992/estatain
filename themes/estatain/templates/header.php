@@ -47,40 +47,100 @@
     </script>
     <?php endif; ?>
     <div class="header-columns">
-        <?php if ( has_custom_logo() || get_bloginfo( 'name' ) ) : ?>
-            <div class="site-branding">
-                <?php if ( has_custom_logo() ) {
-                    the_custom_logo();
-                } else { ?>
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                <?php } ?>
-            </div>
-        <?php endif; ?>
 
-        <?php if ( has_nav_menu( 'primary' ) ) : ?>
-            <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
-                <?php
-                wp_nav_menu([
-                    'theme_location' => 'primary',
-                    'menu_class'     => 'primary-menu',
-                    'container'      => false,
-                    'fallback_cb'    => false,
-                ]);
-                ?>
-            </nav>
-        <?php endif; ?>
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu">
+            <?php if ( has_custom_logo() || get_bloginfo( 'name' ) ) : ?>
+                <div class="site-branding">
+                    <?php if ( has_custom_logo() ) {
+                        the_custom_logo();
+                    } else { ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    <?php } ?>
+                </div>
+            <?php endif; ?>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+       
 
-        <?php if ( has_nav_menu( 'secondary' ) ) : ?>
-            <nav id="site-contact" class="contact-navigation" aria-label="Contact Menu">
-                <?php
-                wp_nav_menu([
-                    'theme_location' => 'secondary',
-                    'menu_class'     => 'secondary-menu',
-                    'container'      => false,
-                    'fallback_cb'    => false,
-                ]);
-                ?>
-            </nav>
-        <?php endif; ?>
+        <!-- Desktop Menus -->
+        <div class="desktop-menus">
+            <?php if ( has_custom_logo() || get_bloginfo( 'name' ) ) : ?>
+                <div class="site-branding">
+                    <?php if ( has_custom_logo() ) {
+                        the_custom_logo();
+                    } else { ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    <?php } ?>
+                </div>
+            <?php endif; ?>
+            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                <nav id="site-navigation" class="main-navigation" aria-label="Primary Menu">
+                    <?php
+                    wp_nav_menu([
+                        'theme_location' => 'primary',
+                        'menu_class'     => 'primary-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    ]);
+                    ?>
+                </nav>
+            <?php endif; ?>
+
+            <?php if ( has_nav_menu( 'secondary' ) ) : ?>
+                <nav id="site-contact" class="contact-navigation" aria-label="Contact Menu">
+                    <?php
+                    wp_nav_menu([
+                        'theme_location' => 'secondary',
+                        'menu_class'     => 'secondary-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    ]);
+                    ?>
+                </nav>
+            <?php endif; ?>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div class="mobile-menu-dropdown" id="mobile-menu-dropdown">
+            <?php if ( has_nav_menu( 'primary' ) ) : ?>
+                <nav class="mobile-primary-menu" aria-label="Mobile Primary Menu">
+                    <?php
+                    wp_nav_menu([
+                        'theme_location' => 'primary',
+                        'menu_class'     => 'primary-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    ]);
+                    ?>
+                </nav>
+            <?php endif; ?>
+            <?php if ( has_nav_menu( 'secondary' ) ) : ?>
+                <nav class="mobile-secondary-menu" aria-label="Mobile Contact Menu">
+                    <?php
+                    wp_nav_menu([
+                        'theme_location' => 'secondary',
+                        'menu_class'     => 'secondary-menu',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                    ]);
+                    ?>
+                </nav>
+            <?php endif; ?>
+        </div>
     </div>
-</header> 
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var dropdown = document.getElementById('mobile-menu-dropdown');
+    if (toggle && dropdown) {
+        toggle.addEventListener('click', function() {
+            dropdown.classList.toggle('open');
+            toggle.classList.toggle('open');
+        });
+    }
+});
+</script> 
